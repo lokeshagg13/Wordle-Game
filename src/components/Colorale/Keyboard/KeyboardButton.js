@@ -4,8 +4,6 @@ import Correct from "../../Common/Icons/Correct";
 import Present from "../../Common/Icons/Present";
 import Absent from "../../Common/Icons/Absent";
 
-import './KeyboardButton.css';
-
 function KeyboardButton({ colorName, colorBgHex, colorTextHex, onKeyPress, colorStatus }) {
     return (
         <button

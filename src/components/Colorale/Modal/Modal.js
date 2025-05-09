@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './Modal.css';
-
 import colorsJSON from "../../../data/colors.json";
 const COLORS = colorsJSON.colors;
 
@@ -28,7 +26,7 @@ function Modal({ gameStatus, solution, gameTypeChanger }) {
                         </div>
                     </div>
                 )}
-                <div class="modal-actions">
+                <div className="modal-actions">
                     <button onClick={() => window.location.reload()}>Play Again</button>
                     <button className="primary" onClick={() => gameTypeChanger('wordle')}>
                         Play Wordle

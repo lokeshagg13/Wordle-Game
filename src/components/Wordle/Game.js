@@ -2,10 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 
 import GameImage from '../../images/title-wordle.png';
-
-import './Game.css';
-
-import Modal from './UI/Modal/Modal';
+import Solution from './Solution/Solution';
+import Modal from './Modal/Modal';
 import Gameboard from './Gameboard/Gameboard';
 import Keyboard from './Keyboard/Keyboard';
 
@@ -54,6 +52,8 @@ function Game({ gameTypeChanger }) {
             }
             return prevGuess;
         });
+
+        document.activeElement.blur();
     };
 
     // Delete a letter
@@ -113,14 +113,24 @@ function Game({ gameTypeChanger }) {
 
             {gameStatus === 'won' && <Confetti />}
             {(gameStatus === 'won' || gameStatus === 'lost') && (
-                <Modal 
-                    gameStatus={gameStatus} 
-                    solution={wordOfTheDay} 
-                    gameTypeChanger={gameTypeChanger} 
+                <Modal
+                    gameStatus={gameStatus}
+                    solution={wordOfTheDay}
+                    gameTypeChanger={gameTypeChanger}
                 />
             )}
             {wordOfTheDay &&
-                <Gameboard guesses={guesses} currentGuess={currentGuess} solution={wordOfTheDay} />
+                <>
+                    <Solution
+                        wordOfTheDay={wordOfTheDay}
+                        gameStatus={gameStatus}
+                    />
+                    <Gameboard
+                        guesses={guesses}
+                        currentGuess={currentGuess}
+                        solution={wordOfTheDay}
+                    />
+                </>
             }
             <Keyboard
                 onLetter={handleLetterInput}

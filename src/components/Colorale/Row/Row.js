@@ -4,8 +4,6 @@ import Correct from "../../Common/Icons/Correct";
 import Present from "../../Common/Icons/Present";
 import Absent from "../../Common/Icons/Absent";
 
-import './Row.css';
-
 import colorsJSON from "../../../data/colors.json";
 const COLORS = colorsJSON.colors;
 

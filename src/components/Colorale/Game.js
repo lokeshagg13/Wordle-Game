@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 
 import GameImage from '../../images/title-colorale.png';
-
-import './Game.css';
-
 import Solution from './Solution/Solution';
 import Modal from './Modal/Modal';
 import Gameboard from './Gameboard/Gameboard';

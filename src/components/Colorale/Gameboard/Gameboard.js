@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './Gameboard.css';
-
 import Line from '../Row/Row';
 
 function Gameboard({ guesses, currentGuess, solution }) {

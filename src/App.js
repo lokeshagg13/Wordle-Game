@@ -6,7 +6,7 @@ import ColoraleGame from './components/Colorale/Game';
 import './App.css';
 
 function App() {
-  const [gameType, setGameType] = useState('colorale');
+  const [gameType, setGameType] = useState('wordle');
 
   return (
     <div className={`app ${gameType}`}>

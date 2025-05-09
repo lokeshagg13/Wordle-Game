@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './KeyboardButton.css';
-
 function KeyboardButton({ letter, onKeyPress, keyStatus }) {
     return (
         <button

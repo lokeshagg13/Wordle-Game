@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 
-import './Keyboard.css';
-
 import KeyboardButton from './KeyboardButton';
 import BackspaceIcon from '../../Common/Icons/Backspace';
 
@@ -18,6 +16,9 @@ function Keyboard({ onLetter, onBackspace, onEnter, characterStatus }) {
             const key = event.key.toLowerCase();
 
             if (key === 'enter') {
+                if (document.activeElement.tagName === "BUTTON") {
+                    event.preventDefault();
+                }
                 onEnter();
             } else if (key === 'backspace') {
                 onBackspace();

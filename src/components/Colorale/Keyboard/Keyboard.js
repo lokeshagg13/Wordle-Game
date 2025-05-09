@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 
-import './Keyboard.css';
-
 import KeyboardButton from './KeyboardButton';
 import BackspaceIcon from '../../Common/Icons/Backspace';
 import colorsJSON from "../../../data/colors.json";
@@ -34,8 +32,6 @@ function Keyboard({ onColor, onBackspace, onEnter, onClear, colorStatus }) {
             window.removeEventListener('keydown', handleKeyPress);
         };
     }, [onBackspace, onEnter]);
-
-
 
     return (
         <div className="keyboard-container">

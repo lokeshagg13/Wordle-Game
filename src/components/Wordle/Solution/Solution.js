@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import colorsJSON from "../../../data/colors.json";
 import Hidden from "../../Common/Icons/Hidden";
 
-const COLORS = colorsJSON.colors;
-
-function Solution({ colorsOfTheDay, gameStatus }) {
+function Solution({ wordOfTheDay, gameStatus }) {
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
@@ -25,17 +22,15 @@ function Solution({ colorsOfTheDay, gameStatus }) {
         <div className="solution">
             <div className="solution-row">
                 {
-                    colorsOfTheDay.map((color, index) => (
+                    wordOfTheDay.split('').map((char, index) => (
                         <div
                             key={index}
-                            className={`solution-color ${gameStatus === 'playing' ? 'hide' : 'show'
+                            className={`solution-letter ${gameStatus === 'playing' ? 'hide' : 'show'
                                 } ${animate ? 'animate' : ''
                                 }`}
-                            style={{
-                                backgroundColor: COLORS[color].background
-                            }}>
+                        >
                             {
-                                gameStatus === "playing" ? <Hidden fill="white" /> : ''
+                                gameStatus === "playing" ? <Hidden fill="white" /> : char.toUpperCase()
                             }
                         </div>
                     ))

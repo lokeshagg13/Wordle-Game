@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import WordleGame from './components/Wordle/Game';
 import ColoraleGame from './components/Colorale/Game';
+import Footer from './components/Common/Footer/Footer';
 
 import './App.css';
 
@@ -33,7 +34,9 @@ function App() {
       </div>
       {gameType === 'wordle' ?
         <WordleGame gameTypeChanger={setGameType} /> :
-        <ColoraleGame gameTypeChanger={setGameType} />}
+        <ColoraleGame gameTypeChanger={setGameType} />
+      }
+      <Footer />
     </div>
   );
 }

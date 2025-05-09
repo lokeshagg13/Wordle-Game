@@ -697,3 +697,40 @@
   width: 1.5rem;
   height: 1.5rem;
 }
+
+/* Footer */
+.footer {
+  background-color: white;
+  padding: 6px;
+  width: 100%;
+}
+
+.footer .footer-container {
+  width: 100%;
+  padding-inline: 6px;
+  @media (width >= 40rem) {
+    max-width: 40rem;
+  }
+  @media (width >= 48rem) {
+    max-width: 48rem;
+  }
+  @media (width >= 64rem) {
+    max-width: 64rem;
+  }
+  @media (width >= 80rem) {
+    max-width: 80rem;
+  }
+  @media (width >= 96rem) {
+    max-width: 96rem;
+  }
+}
+
+.footer .footer-text {
+  font-size: 0.875rem;
+  text-align: center;
+  color: gray;
+}
+
+.footer .footer-name {
+  color: purple;
+}

@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import GameImage from './images/title.png';
-import Game from './components/Game';
+import WordleGame from './components/Wordle/Game';
+
+import './App.css';
 
 function App() {
+  const [gameType, setGameType] = useState('wordle');
+
   return (
-    <div className="App">
-      <img src={GameImage} alt="Wordle" className="game-image" width={400} height={150} />
-      <Game />
+    <div className={`app ${gameType}`}>
+      <div className="switch-div">
+        <button className="primary" onClick={() => gameType === 'wordle' ? setGameType('colorale') : setGameType('wordle')}>
+          Play {gameType === 'wordle' ? 'Colorale' : 'Wordle'}
+        </button>
+      </div>
+      <WordleGame />
     </div>
   );
 }

@@ -1,0 +1,35 @@
+.app.wordle {
+    background-color: #f8eace;
+}
+
+.switch-div {
+  margin: 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.switch-div button.primary {
+    background-color: #27548A;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1em;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.switch-div button.primary:hover {
+    background-color: #183B4E;
+}
+
+@media (max-width: 768px) {
+  .switch-div {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .switch-div {
+    margin: 0.5rem;
+  }
+}

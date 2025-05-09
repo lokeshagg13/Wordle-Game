@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 
+import GameImage from '../../images/title.png';
+
 import './Game.css';
 
 import Modal from './UI/Modal/Modal';
 import Gameboard from './Gameboard/Gameboard';
 import Keyboard from './Keyboard/Keyboard';
 
-import wordList from '../data/words.json';
+import wordList from '../../data/words.json';
 
 const MAX_GUESSES = 6;
 const WORD_LENGTH = 5;
@@ -105,6 +107,10 @@ function Game() {
 
     return (
         <>
+            <div className="image-div">
+                <img src={GameImage} alt="Wordle" className="game-image" width={400} height={150} />
+            </div>
+
             {gameStatus === 'won' && <Confetti />}
             {(gameStatus === 'won' || gameStatus === 'lost') && (
                 <Modal gameStatus={gameStatus} solution={wordOfTheDay} />

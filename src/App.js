@@ -20,7 +20,6 @@ function App() {
 
     const appleTouchIcon = document.querySelector("link[rel='apple-touch-icon']");
     if (appleTouchIcon) {
-      console.log(appleTouchIcon)
       appleTouchIcon.href = gameType === 'wordle' ? `${process.env.PUBLIC_URL}/apple-touch-icon-wordle.png` : `${process.env.PUBLIC_URL}/apple-touch-icon-colorale.png`;
     }
   }, [gameType]);

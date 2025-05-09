@@ -19,47 +19,58 @@
   display: flex;
   flex-direction: column;
   font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .modal-content button {
-  margin: 1rem;
-  padding: 1rem;
-  font-size: 1rem;
-  background: antiquewhite;
-  border: none;
-  border-radius: 10px;
+  background: #D4C2A5;
+  color: black;
+  padding: 0.7rem;
+  font-size: 0.55em;
+  font-weight: 800;
   cursor: pointer;
+  width: fit-content;
+  margin: 0.5rem;
 }
 
 .modal-content button:hover {
-  background: rgb(247, 184, 103);
+  background: #B8A489;
 }
 
 .modal-content button.primary {
     background-color: #27548A;
     color: white;
-    padding: 0.5rem;
+    padding: 0.7rem;
     font-size: 0.5em;
     font-weight: 800;
     cursor: pointer;
+    width: fit-content;
 }
 
 .modal-content button.primary:hover {
   background-color: #183B4E;
 }
 
-.solution {
-  font-size: 1.2rem;
-  margin: 1rem 1rem;
+.solution-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+  margin: 5px;
 }
 
-.solution-word {
-  text-transform: uppercase;
-  border: 1px solid;
-  width: fit-content;
-  padding: 0.5rem;
+.solution-color {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  perspective: 1000px;
+  margin: 0.2rem;
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import Correct from "../UI/Icons/Correct";
-import Present from "../UI/Icons/Present";
-import Absent from "../UI/Icons/Absent";
+import Correct from "../../Common/Icons/Correct";
+import Present from "../../Common/Icons/Present";
+import Absent from "../../Common/Icons/Absent";
 
 import './Row.css';
 

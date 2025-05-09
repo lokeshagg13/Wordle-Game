@@ -5,10 +5,11 @@ import GameImage from '../../images/title-colorale.png';
 
 import './Game.css';
 
-import Solution from './Solution';
-import Modal from './UI/Modal/Modal';
+import Solution from './Solution/Solution';
+import Modal from './Modal/Modal';
 import Gameboard from './Gameboard/Gameboard';
 import Keyboard from './Keyboard/Keyboard';
+
 import colorsJSON from "../../data/colors.json";
 
 const MAX_GUESSES = 6;
@@ -37,19 +38,20 @@ function Game({ gameTypeChanger }) {
     // Fetching the colors of the day
     useEffect(() => {
         const colorNames = Object.keys(COLORS);
-        let sequence = Array(SEQ_LENGTH).fill('');
+        let randomSequence = Array(SEQ_LENGTH).fill('');
         let max_repeats = Math.floor(SEQ_LENGTH / 2);
         let freq = {};
         for (let i = 0; i < SEQ_LENGTH;) {
             let choice = colorNames[Math.floor(Math.random() * colorNames.length)];
             freq[choice] = freq[choice] || 0;
             if (freq[choice] < max_repeats) {
-                sequence[i] = choice;
+                randomSequence[i] = choice;
                 freq[choice] += 1
                 i += 1
             }
         }
-        setColorsOfTheDay(sequence);
+        // console.log('Colors of the day:', randomSequence);
+        setColorsOfTheDay(randomSequence);
     }, []);
 
     // Add a color
@@ -132,22 +134,22 @@ function Game({ gameTypeChanger }) {
 
             {gameStatus === 'won' && <Confetti />}
             {(gameStatus === 'won' || gameStatus === 'lost') && (
-                <Modal 
-                    gameStatus={gameStatus} 
+                <Modal
+                    gameStatus={gameStatus}
                     solution={colorsOfTheDay}
-                    gameTypeChanger={gameTypeChanger} 
+                    gameTypeChanger={gameTypeChanger}
                 />
             )}
 
             {colorsOfTheDay &&
                 <>
-                    <Solution 
+                    <Solution
                         colorsOfTheDay={colorsOfTheDay}
-                        gameStatus={gameStatus} 
+                        gameStatus={gameStatus}
                     />
-                    <Gameboard 
-                        guesses={guesses} 
-                        currentGuess={currentGuess} 
+                    <Gameboard
+                        guesses={guesses}
+                        currentGuess={currentGuess}
                         solution={colorsOfTheDay}
                     />
                 </>

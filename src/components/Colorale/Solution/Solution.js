@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import colorsJSON from "../../data/colors.json";
-import Hidden from "./UI/Icons/Hidden";
+import colorsJSON from "../../../data/colors.json";
+import Hidden from "../../Common/Icons/Hidden";
 
 import './Solution.css';
 

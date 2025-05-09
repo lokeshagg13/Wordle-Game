@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Modal.css';
 
-import colorsJSON from "../../../../data/colors.json";
+import colorsJSON from "../../../data/colors.json";
 const COLORS = colorsJSON.colors;
 
 function Modal({ gameStatus, solution, gameTypeChanger }) {
@@ -28,10 +28,12 @@ function Modal({ gameStatus, solution, gameTypeChanger }) {
                         </div>
                     </div>
                 )}
-                <button onClick={() => window.location.reload()}>Play Again</button>
-                <button className="primary" onClick={() => gameTypeChanger('wordle')}>
-                    Play Wordle
-                </button>
+                <div class="modal-actions">
+                    <button onClick={() => window.location.reload()}>Play Again</button>
+                    <button className="primary" onClick={() => gameTypeChanger('wordle')}>
+                        Play Wordle
+                    </button>
+                </div>
             </div>
         </div>
     )

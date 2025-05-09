@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import './Keyboard.css';
 
 import KeyboardButton from './KeyboardButton';
-import BackspaceIcon from '../UI/Icons/Backspace';
+import BackspaceIcon from '../../Common/Icons/Backspace';
 
 function Keyboard({ onLetter, onBackspace, onEnter, characterStatus }) {
     const getKeyStatus = (key) => {

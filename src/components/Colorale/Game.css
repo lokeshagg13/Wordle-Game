@@ -1,0 +1,33 @@
+.image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-direction: column;
+}
+
+.game-image {
+  max-width: 90%;
+  width: 30%;
+  height: 150px;
+}
+
+@media (max-width: 768px) {
+  .image-div {
+    margin-bottom: 0.5rem; /* Reduce margin on smaller screens */
+  }
+
+  .game-image {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-div {
+    padding: 0.5rem; /* Add padding for smaller devices */
+  }
+
+  .game-image {
+    width: 80%;
+  }
+}

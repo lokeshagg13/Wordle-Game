@@ -1,0 +1,38 @@
+.keyboard-row button {
+  font-family: "nyt-franklin";
+  font-size: 1.25em;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  margin: 0 6px 0 0;
+  height: 58px;
+  border-radius: 4px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background: snow;
+  cursor: pointer;
+}
+
+button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+button.enter, button.clear {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  flex: 1;
+  font-size: 1em !important;
+  padding: 0 2px;
+}
+
+button.backspace {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  flex: 1;
+}

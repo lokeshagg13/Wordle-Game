@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 
-import GameImage from '../../images/title.png';
+import GameImage from '../../images/title-wordle.png';
 
 import './Game.css';
 
@@ -14,7 +14,7 @@ import wordList from '../../data/words.json';
 const MAX_GUESSES = 6;
 const WORD_LENGTH = 5;
 
-function Game() {
+function Game({ gameTypeChanger }) {
     const [wordOfTheDay, setWordOfTheDay] = useState('');
     const [guesses, setGuesses] = useState(Array(MAX_GUESSES).fill(Array(WORD_LENGTH).fill('')));
     const [currentGuess, setCurrentGuess] = useState(Array(WORD_LENGTH).fill(''));
@@ -113,7 +113,11 @@ function Game() {
 
             {gameStatus === 'won' && <Confetti />}
             {(gameStatus === 'won' || gameStatus === 'lost') && (
-                <Modal gameStatus={gameStatus} solution={wordOfTheDay} />
+                <Modal 
+                    gameStatus={gameStatus} 
+                    solution={wordOfTheDay} 
+                    gameTypeChanger={gameTypeChanger} 
+                />
             )}
             {wordOfTheDay &&
                 <Gameboard guesses={guesses} currentGuess={currentGuess} solution={wordOfTheDay} />

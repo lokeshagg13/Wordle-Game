@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Modal.css';
 
-function Modal({ gameStatus, solution }) {
+function Modal({ gameStatus, solution, gameTypeChanger }) {
     return (
         <div className="modal">
             <div className="modal-content">
@@ -16,6 +16,9 @@ function Modal({ gameStatus, solution }) {
                     </div>
                 )}
                 <button onClick={() => window.location.reload()}>Play Again</button>
+                <button className="primary" onClick={() => gameTypeChanger('wordle')}>
+                    Play Wordle
+                </button>
             </div>
         </div>
     )

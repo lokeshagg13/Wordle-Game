@@ -1,0 +1,73 @@
+.keyboard-container {
+  height: auto;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.keyboard-row {
+  display: flex;
+  width: 100%;
+  margin: 0 auto 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyboard-row .spacer {
+  flex: 0.5;
+}
+
+.keyboard-row button {
+  font-family: "nyt-franklin";
+  font-size: 1.25em;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  margin: 0 6px 0 0;
+  height: 58px;
+  border-radius: 4px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background: snow;
+  cursor: pointer;
+}
+
+button.enter {
+  font-size: 0.8em !important;
+  flex: 1.5;
+  padding: 0 2px;
+}
+
+button.backspace {
+  flex: 1.5;
+}
+
+/* Fixed width for tablet/laptop screens */
+@media (min-width: 768px) {
+  .keyboard-container {
+    width: 400px; /* Fixed width for the keyboard */
+    margin: 2rem auto; /* Center it horizontally */
+  }
+
+  .keyboard-row button {
+    height: 60px; /* Adjust height if needed */
+    font-size: 1.1em; /* Adjust button size for tablets/laptops */
+  }
+}
+
+@media (min-width: 1024px) {
+  .keyboard-container {
+    width: 400px; /* Wider width for larger screens */
+  }
+
+  .keyboard-row button {
+    /* margin: 1rem !important;
+    height: 70px; */
+  }
+}

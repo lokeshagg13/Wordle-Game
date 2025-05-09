@@ -1,0 +1,44 @@
+{
+    "colors": {
+        "indigo": {
+            "background": "#4B0082",
+            "text": "#FFFFFF"
+        },
+        "blue": {
+            "background": "#1E90FF",
+            "text": "#FFFFFF"
+        },
+        "golden": {
+            "background": "#DAA520",
+            "text": "#000000"
+        },
+        "red": {
+            "background": "#DC143C",
+            "text": "#FFFFFF"
+        },
+        "black": {
+            "background": "#000000",
+            "text": "#FFFFFF"
+        },
+        "purple": {
+            "background": "#BA55D3",
+            "text": "#FFFFFF"
+        },
+        "turquoise": {
+            "background": "#40E0D0",
+            "text": "#000000"
+        },
+        "yellow": {
+            "background": "#FFFF00",
+            "text": "#000000"
+        },
+        "coral": {
+            "background": "#FF7F50",
+            "text": "#000000"
+        },
+        "lime": {
+            "background": "#32CD32",
+            "text": "#000000"
+        }
+    }
+}

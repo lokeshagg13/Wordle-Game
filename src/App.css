@@ -2,6 +2,10 @@
     background-color: #f8eace;
 }
 
+.app.colorale {
+  background-color: #fcf9f0;
+}
+
 .switch-div {
   margin: 1rem;
   display: flex;

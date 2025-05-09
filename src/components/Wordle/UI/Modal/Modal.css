@@ -35,6 +35,19 @@
   background: rgb(247, 184, 103);
 }
 
+.modal-content button.primary {
+    background-color: #27548A;
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.5em;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.modal-content button.primary:hover {
+  background-color: #183B4E;
+}
+
 .solution {
   font-size: 1.2rem;
   margin: 1rem 1rem;

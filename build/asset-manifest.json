@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/Wordle-Game/static/js/main.b48bc4ce.js",
+    "static/media/title-colorale.png": "/Wordle-Game/static/media/title-colorale.cceb64a226211dfaa789.png",
+    "static/media/title-wordle.png": "/Wordle-Game/static/media/title-wordle.f7e714de3472cdb86f0f.png",
+    "index.html": "/Wordle-Game/index.html",
+    "main.b48bc4ce.js.map": "/Wordle-Game/static/js/main.b48bc4ce.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b48bc4ce.js"
+  ]
+}

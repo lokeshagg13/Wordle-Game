@@ -5,8 +5,7 @@ body {
   height: 100%;
 }
 
-/* App.css */
-
+/* #region - Header */
 .app.wordle {
   background-color: #f8eace;
 }
@@ -47,11 +46,7 @@ body {
   }
 }
 
-/* App - Wordle */
-
-/* Wordle -> Game.css */
-
-.app.wordle .image-div {
+.image-div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,42 +54,44 @@ body {
   flex-direction: column;
 }
 
-.app.wordle .game-image {
+.game-image {
   max-width: 90%;
   width: 30%;
   height: 150px;
 }
 
 @media (max-width: 768px) {
-  .app.wordle .image-div {
+  .image-div {
     margin-bottom: 0.5rem; /* Reduce margin on smaller screens */
   }
 
-  .app.wordle .game-image {
+  .game-image {
     width: 50%;
   }
 }
 
 @media (max-width: 480px) {
-  .app.wordle .image-div {
+  .image-div {
     padding: 0.5rem; /* Add padding for smaller devices */
   }
 
-  .app.colorale .game-image {
+  .game-image {
     width: 80%;
   }
 }
+/* #endregion */
 
-/* Wordle -> Gameboard.css */
+/* #region - App - Wordle */
 
+/* #region - Wordle -> Gameboard.css */
 .app.wordle .game-board {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* #endregion */
 
-/* Wordle -> Keyboard.css */
-
+/* #region - Wordle -> Keyboard.css */
 .app.wordle .keyboard-container {
   height: auto;
   margin: 1rem auto;
@@ -168,9 +165,9 @@ body {
     height: 70px;
   }
 }
+/* #endregion */
 
-/* Wordle -> KeyboardButton.css */
-
+/* #region - Wordle -> KeyboardButton.css */
 .app.wordle button.absent {
   background-color: #787c7e;
   color: white;
@@ -185,9 +182,9 @@ body {
   background-color: #6aaa64;
   color: white;
 }
+/* #endregion */
 
-/* Wordle -> Modal.css */
-
+/* #region - Wordle -> Modal.css */
 .app.wordle .modal {
   position: fixed;
   top: 0;
@@ -265,9 +262,9 @@ body {
   width: fit-content;
   padding: 0.5rem;
 }
+/* #endregion */
 
-/* Wordle -> Row.css */
-
+/* #region - Wordle -> Row.css */
 .app.wordle .row {
   display: flex;
   flex-direction: row;
@@ -324,9 +321,9 @@ body {
 .app.wordle .letter.correct {
   background-color: #6aaa64;
 }
+/* #endregion */
 
-/* Wordle -> Solution.css */
-
+/* #region - Wordle -> Solution.css */
 .app.wordle .solution-row {
   display: flex;
   flex-direction: row;
@@ -379,55 +376,21 @@ body {
   width: 1.5rem;
   height: 1.5rem;
 }
+/* #endregion */
 
-/* App - Colorale */
+/* #endregion */
 
-/* Colorale -> Game.css */
+/* #region - App - Colorale */
 
-.app.colorale .image-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-  flex-direction: column;
-}
-
-.app.colorale .game-image {
-  max-width: 90%;
-  width: 30%;
-  height: 150px;
-}
-
-@media (max-width: 768px) {
-  .app.colorale .image-div {
-    margin-bottom: 0.5rem; /* Reduce margin on smaller screens */
-  }
-
-  .app.colorale .game-image {
-    width: 50%;
-  }
-}
-
-@media (max-width: 480px) {
-  .app.colorale .image-div {
-    padding: 0.5rem; /* Add padding for smaller devices */
-  }
-
-  .app.colorale .game-image {
-    width: 80%;
-  }
-}
-
-/* Colorale -> Gameboard.css */
-
+/* #region - Colorale -> Gameboard.css */
 .app.colorale .game-board {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* #endregion */
 
-/* Colorale -> Keyboard.css */
-
+/* #region - Colorale -> Keyboard.css */
 .app.colorale .keyboard-container {
   height: auto;
   margin: 1rem auto;
@@ -490,9 +453,9 @@ body {
     height: 70px;
   }
 }
+/* #endregion */
 
-/* Colorale -> KeyboardButton.css */
-
+/* #region - Colorale -> KeyboardButton.css */
 .app.colorale button svg {
   width: 1.5rem;
   height: 1.5rem;
@@ -514,9 +477,9 @@ body {
   height: 40px;
   flex: 1;
 }
+/* #endregion */
 
-/* Colorale -> Modal.css */
-
+/* #region - Colorale -> Modal.css */
 .app.colorale .modal {
   position: fixed;
   top: 0;
@@ -603,9 +566,9 @@ body {
   perspective: 1000px;
   margin: 0.2rem;
 }
+/* #endregion */
 
-/* Colorale -> Row.css */
-
+/* #region - Colorale -> Row.css */
 .app.colorale .row {
   display: flex;
   flex-direction: row;
@@ -651,9 +614,9 @@ body {
   width: 1.5rem;
   height: 1.5rem;
 }
+/* #endregion */
 
-/* Colorale -> Solution.css */
-
+/* #region - Colorale -> Solution.css */
 .app.colorale .solution-row {
   display: flex;
   flex-direction: row;
@@ -705,8 +668,11 @@ body {
   width: 1.5rem;
   height: 1.5rem;
 }
+/* #endregion */
 
-/* Footer */
+/* #endregion */
+
+/* #region - Footer */
 .footer {
   background-color: white;
   padding: 6px;
@@ -728,3 +694,4 @@ body {
 .footer .footer-name {
   color: purple;
 }
+/* #endregion */
